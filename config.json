@@ -1,0 +1,12 @@
+{
+    "start":"2023/02/01",
+    "end":"2017/02/01",
+    "save_dir":"dir/to/save/single/coin/file",
+    "topN":30,
+    "process_num":5,
+    "proxies": {
+        "http": "http://localhost:33210",
+        "https": "http://localhost:33210"
+    },
+    "save_path":"path/to/save/entie_csv_file"
+}

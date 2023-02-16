@@ -1,0 +1,20 @@
+import logging
+#create logger
+log=logging.getLogger("example")
+# log level: debug<info<warn<Error<Fatal;
+log.setLevel(logging.DEBUG)
+hander1=logging.StreamHandler()
+hander2=logging.FileHandler('haha.log',mode='w')
+hander1.setLevel(logging.INFO)
+hander2.setLevel(logging.DEBUG)
+formatter1=logging.Formatter("%(asctime)s - %(levelname)s - %(message)s", datefmt='%Y-%m-%d %H:%M:%S')
+formatter2=logging.Formatter("%(asctime)s - %(levelname)s - %(message)s", datefmt='%Y-%m-%d %H:%M:%S')
+hander1.setFormatter(formatter1)
+hander2.setFormatter(formatter2)
+log.addHandler(hander1)
+log.addHandler(hander2)
+# print(log.callHandlers)
+# log.info("这是一个info信息")
+# log.debug("这是一个debug信息")
+# log.warning("这是一个warnning信息")
+# log.info("这个怎么算呢")
